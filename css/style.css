@@ -12,7 +12,6 @@ a {
     color: var(--black);
     transition: 0.3s;
 }
-
 a:hover {
     color: var(--secondary);
 }
@@ -69,6 +68,13 @@ figure.overlay:before {
     --footer: #0f162c;
     --verified: #0f8914;
     --bgcolor: #344372;
+    --primary: #5D9C59;
+    --primaryDark: #4c008f;
+    --secondary: #898121;
+    --secondaryDark: #cc9705;
+    --accent: black;
+    --white: #fff;
+    --black: #222;
 }
 
 /* ==========Navbar========== */
@@ -80,8 +86,10 @@ figure.overlay:before {
 .header_icon ul {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 24px;
     position: relative;
+    justify-content: center;
+    margin-right: 30px;
 }
 
 marquee span {
@@ -90,22 +98,30 @@ marquee span {
     font-weight: 500;
     animation: color-change 1s infinite;
 }
+
 @keyframes color-change {
-    0% { color:white }
-    50% { color: rgba(255, 255, 255, 0.712); }
-    100% { color: rgb(255, 255, 255); }
-  }
+    0% {
+        color: white
+    }
+
+    50% {
+        color: rgba(255, 255, 255, 0.712);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
 
 .margquee-tag {
     width: 100%;
     display: flex;
-    max-width: 500px;
+    /* max-width: 500px; */
     align-items: center;
 }
 
 .header-top {
     background-color: var(--secondary);
-    padding: 4px;
 }
 
 .header-bottom {
@@ -122,6 +138,7 @@ marquee span {
     justify-content: space-between;
     /* position: relative; */
     position: relative;
+    grid-gap: 20px;
 }
 
 .header-nav ul {
@@ -134,14 +151,10 @@ marquee span {
     position: absolute;
     right: 0;
     top: 0;
-    background: var(--accent);
+    background: #183816;
     height: 35px;
     width: 330px;
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 150%);
-}
-
-header {
-    position: relative;
 }
 
 li.icons a {
@@ -169,15 +182,21 @@ a.instagram:hover {
 .linkedin:hover {
     color: rgb(36 119 223);
 }
-.search-icon i {
-    color: black;
-    font-size: 17px;
+
+.search-icon {
     height: 40px;
     width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.search-icon i {
+    color: white;
+    font-size: 17px;
+    margin-top: -3px;
+}
+
 .header-form input {
     width: 100%;
     height: 100%;
@@ -186,55 +205,130 @@ a.instagram:hover {
 }
 
 .header-form {
-    display: flex;
-    align-items: center;
-    background: white;
-    overflow: hidden;
-    height: 100%;
-    position: absolute;
-    border-radius: 10px;
-    z-index: 5;
     width: 0%;
-    transition: 0.5s ease-in-out;
-    left: 0;
-    max-width: 500px;
+    z-index: 5;
     height: 40px;
+    display: flex;
+    overflow: hidden;
+    max-width: 500px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
 }
-.header-form.active{
+
+.header-form.active {
     width: 100%;
-    right: 0;
 }
-.search-icon i{
-    color: white;
-}
-.hide{
+
+.menu {
+    background: var(--primary);
+    border-radius: 5px;
+    transition: 0.3s;
     display: none;
 }
+
+.menu i {
+    color: white;
+    font-size: 17px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.hide {
+    display: none;
+}
+
 .header-search {
     position: relative;
     z-index: 1;
 }
+
 .header-nav {
-    align-self: stretch;
     display: flex;
-    align-items: center;
     position: relative;
+    align-self: stretch;
+    align-items: center;
     justify-content: center;
 }
+
 .header-search {
     height: 100%;
     display: flex;
     justify-content: flex-end;
 }
+
 .search-icon {
     background: var(--primary);
     border-radius: 5px;
+    transition: 0.3s;
 }
+
 .header-logo {
     height: 60px;
     width: 200px;
     display: flex;
 }
+
 .header-links>* {
     flex: 1;
+}
+
+.search-icon:hover {
+    background: #183816;
+}
+
+.search-icon.active {
+    background: #220000;
+    border-radius: 25px;
+}
+
+.header-form-btn {
+    height: 100%;
+    padding: 5px 14px;
+    background: var(--secondary);
+    color: white;
+    font-weight: 700;
+    display: none;
+}
+
+
+.menu.active {
+    background: #220000;
+    position: relative;
+    border-radius: 25px 25px 0 0;
+}
+
+.menu:hover {
+    background: #220000;
+}
+.menu.active:after{
+    content: "";
+    position: absolute;
+    background: #220000;
+    height: 20px;
+    width: 99%;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.mobile_menu.active {
+    right: 0;
+    top: 107px;
+    right: 0;
+    border-radius: 0;
+    opacity: 1;
+    height: 100vh;
+    backdrop-filter: blur(171px);
+    width: 300px;
 }
