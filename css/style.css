@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"); * {
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"); ga {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -354,11 +354,11 @@ a.instagram:hover {
     position: absolute;
     top: 50%;
     left: 0px;
+    z-index: 4;
 }
 
 .header-form.active {
     width: 100%;
-    z-index: 4;
 }
 
 .menu {
@@ -1936,7 +1936,7 @@ a.f_tag:hover {
     scale: 1.1;
     transition: all 1s cubic-bezier(0.96, 0.6, 0.38, 1.27) 0s;
 }
-
+/* Contact us */
 .contact_heading h4 {
     font-size: 35px;
     font-weight: 600;
@@ -2101,4 +2101,25 @@ a.f_tag:hover {
 
 .msg textarea:focus {
     border-color: var(--primary);
+}
+/* About us  */
+.main_about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about_content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about_content h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.about_par p {
+    color: #3a3a3a;
 }
