@@ -71,6 +71,9 @@
         width: 100%;
         text-align: center;
     }
+    .main-slide-content{
+        padding-left: 55px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -119,6 +122,11 @@
     .swiper-btn{
         display: none;
     }
+    .main-slide-content{
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+  
 }  
 
 @media (max-width: 640px) {
@@ -127,7 +135,6 @@
       max-width: 700px;
     }
     .blog_card .meta {
-      /* flex-basis: 40%; */
       height: 200px;
     }
     .blog_card .description:before {
@@ -158,5 +165,10 @@
     .form_email, .form_num ,
     .msg{
         grid-column: unset;
+    }
+    .category_main {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
     }
   }

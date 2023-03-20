@@ -26,8 +26,7 @@ $(document).ready(function () {
   var swiper = new Swiper(".hero_slider", {
     centeredSlides: true,
     loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 20,
+    slidesPerView: 1,
     speed:500,
     
     navigation: {
@@ -38,7 +37,14 @@ $(document).ready(function () {
         el: ".swiper-pagination",
         dynamicBullets: true,
       },
-    
+      breakpoints: {
+        // When window width is >= 768px
+
+        // When window width is >= 992px
+        992: {
+          slidesPerView: 1,
+        }
+      }
   });
 
 //   var swiper = new Swiper(".hero_slider", {
