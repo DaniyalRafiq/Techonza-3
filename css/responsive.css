@@ -126,9 +126,14 @@
         padding-left: 20px;
         padding-bottom: 20px;
     }
-  
-}  
+    .blog_section{
+        flex-direction: column-reverse;
 
+    }
+    .position_static{
+        position: unset;
+    }
+}  
 @media (max-width: 640px) {
     .blog_card {
       flex-direction: column;
@@ -170,5 +175,11 @@
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
+    }
+    .c_p_img figure{
+        flex: 1;
+    }
+    .c_p_card_main{
+        flex-direction: column;
     }
   }

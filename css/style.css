@@ -2526,3 +2526,138 @@ a.tag_items:hover {
 .reply_comments:not(:has(.nasted_comment)):after {
     content: none;
 }
+
+/* category section */
+
+
+.c_p_img figure {
+    height: 250px;
+    flex: 0 0 250px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.c_p_card_main {
+    display: flex;
+    gap: 10px;
+}
+
+.c_p_img {
+    display: flex;
+    flex: 0 0 250px;
+}
+.c_p_content_card .content h4 {font-size: 16px;text-align: center;background: #0000008c;width: 100%;padding: 6px 4px;text-transform: capitalize;}
+
+.c_p_content_card {
+    height: 100px;
+    overflow: hidden;
+    width: 100px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.c_p_content_card figure {
+    height: 100%;
+    width: 100%;
+}
+
+
+c_p_content_card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.c_p_content_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(93px, 1fr));
+    gap: 10px;
+    max-height: 209px;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+.c_p_content_card {
+    height: 100px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.c_p_content_card figure {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    filter: blur(1px);
+}
+
+
+.c_p_content_card .content {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    transform: translatey(-50%);
+    transition: 0.3s cubic-bezier(0.4, 0, 0, 1.98);
+    color: white;
+    width: 100%;
+}
+
+.c_p_content_card:hover .content {top: 118%;}
+
+.c_p_content_card:hover figure {
+    filter: blur(0px);
+}
+.c_p_content {
+    flex: 1;
+}
+.c_p_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.c_p_content_heading h4 {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+
+
+.c_p_content_cards::-webkit-scrollbar {
+    width: 4px;
+}
+
+.c_p_content_cards::-webkit-scrollbar-track {
+    box-shadow: grey 0px 0px 5px inset;
+}
+
+.c_p_content_cards::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+.c_p_main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.search_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
+}
+
+.search_main .side_bar_blog_card:after {
+    content: none;
+}
+.search_main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(313px, 1fr));
+    gap: 30px;
+}
+
+.search_main .side_bar_blog_card:after {
+    content: none;
+}
