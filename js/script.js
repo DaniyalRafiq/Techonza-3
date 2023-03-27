@@ -46,34 +46,14 @@ $(document).ready(function () {
         }
       }
   });
-
-//   var swiper = new Swiper(".hero_slider", {
-//     pagination: {
-//       el: ".swiper-pagination",
-//       dynamicBullets: true,
-//     }
-//   });
-
-"use strict";
-// class Dev {
-//     constructor() {
-//         this.getDay();
-//         this.getMonth();
-//     }
-//     getDay() {
-//         var date = new Date();
-//         $('.date .num').each((i, element) => {
-//             $(element).text(date.getDate());
-//         });
-//     }
-//     getMonth() {
-//         var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-//         var d = new Date();
-//         $('.date .month').each((i, element) => {
-//             $(element).text(month[d.getMonth()]);
-//         });
-//     }
-// }
-// new Dev();
+  const mainAlpha = $('.main-alphabet');
+  const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  for (let index = 0; index < alphabet.length; index++) {
+     $(mainAlpha).append(`<a href="#" class="alphabet-item">${alphabet[index]}</a>`);
+     $('.alphabet-item').first().addClass("active");
+  }
+  $('.alphabet-item').click(function () {
+     $(this).addClass('active').siblings().removeClass('active')
+  });
 
 })

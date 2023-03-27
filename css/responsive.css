@@ -133,6 +133,18 @@
     .position_static{
         position: unset;
     }
+
+    .sing_post_social{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .single_next_prev{
+        flex-direction: column;
+    }
+    .contact_social_media{
+        gap: 10px;
+    }
 }  
 @media (max-width: 640px) {
     .blog_card {
