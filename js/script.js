@@ -55,5 +55,8 @@ $(document).ready(function () {
   $('.alphabet-item').click(function () {
      $(this).addClass('active').siblings().removeClass('active')
   });
+  $('.deals_item').click(function () {
+    $(this).addClass('active').siblings().removeClass('active')
+ });
 
 })
