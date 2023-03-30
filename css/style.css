@@ -941,10 +941,7 @@ a.icon-link:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px 0px;
     overflow: hidden;
     border-radius: 0px;
-    height: 50px;
-    line-height: 50px;
     display: inline-block;
-    padding: 0px;
     border: none;
 }
 
@@ -2989,7 +2986,7 @@ span.fa.fa-star {
     justify-content: center;
     color: white;
     border-radius: 5px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     transition: 0.3s ease;
     right: 0;
@@ -3063,7 +3060,6 @@ span.fa.fa-star {
     background: #f9f5f5;
     border-radius: 5px;
     position: relative;
-    overflow: hidden;
 }
 .coupon_tags {
     display: flex;
@@ -3104,16 +3100,21 @@ span.fa.fa-star {
 }
 .verified {
     position: absolute;
-    background: #078307;
-    width: 80px;
     text-align: center;
     color: white;
-    left: -16px;
-    top: 15px;
+    left: -35px;
+    top: 7px;
     font-size: 13px;
-    rotate: 314deg;
+    transform: rotate(-45deg);
+    min-width: 110px;
 }
-
+.verified p {
+    clip-path: polygon(22% 0, 78% 0, 100% 100%, 0% 100%);
+    background: #38913c;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: 500;
+}
 .coupon_card_img {
     border-right: 1px dashed #e3e3e3;
     padding-right: 7px;
@@ -3140,6 +3141,7 @@ span.fa.fa-star {
 .get_code.deal {
     right: 0;
     background: var(--secondary);
+    width: 100%;
 }
 
 .get_code.deal:hover {
@@ -3150,4 +3152,144 @@ span.fa.fa-star {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+button.btn_close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--secondary);
+    color: white;
+    border-radius: 0 0 0 7px;
+    z-index: 10;
+}
+
+.btn_close:hover {
+    background: var(--secondaryDark);
+}
+
+.modal-content {
+    overflow: hidden;
+}
+.btn_close:hover i {
+    rotate: 180deg;
+}
+
+.btn_close i {
+    transition: 0.3s;
+}
+.modal-header {
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    padding: 5px;
+}
+h5#exampleModalLabel {font-size: 19px;font-weight: 700;display: none;padding: 0;}
+.modal_img {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+}
+.modal_img figure {
+    height: 90px;
+    width: 147px;
+    border: 1px solid;
+    border-color: #e1e1e1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.modal_img figure img {
+    object-fit: contain;
+}
+
+.copy_code span {
+    display: block;
+}
+
+.copy_code {
+    background: linear-gradient(315deg,rgba(0,0,0,.06) 10%,rgba(0,0,0,0) 15%,rgba(0,0,0,0) 35%,rgba(0,0,0,.06) 40%,rgba(0,0,0,.06) 60%,rgba(0,0,0,0) 65%,rgba(0,0,0,0) 85%,rgba(0,0,0,.06) 90%) repeat scroll 0 0/6px 6px rgba(0,0,0,0);
+    border: 1px solid;
+    margin: auto;
+    width: 310px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+span.click_code {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+    gap: 5px;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.modal_title h4 {
+    font-size: 20px;
+}
+
+.modal_title p {
+    font-size: 13px;
+}
+
+.modal_title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.modal-footer {
+    align-items: center;
+    justify-content: space-around;
+    background: #f3f3f3;
+}
+
+.start_date , .exp_date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.start_date {
+    color: green;
+}
+
+.exp_date {
+    color: red;
+}
+.start_date span, .exp_date span {color: gray;}
+.verified:before, .verified:after {
+    position: absolute;
+    content: '';
+    height: 13px;
+    width: 13px;
+    background: #38913c;
+    top: 99%;
+}
+
+.verified::before {
+    left: 0;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+::after {}
+
+.verified::after {
+    right: 0;
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
