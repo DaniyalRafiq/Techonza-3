@@ -74,6 +74,9 @@
     .main-slide-content{
         padding-left: 55px;
     }
+    .coupon_card_title {flex-direction: column;align-items: baseline;}
+
+.coupon_bottom {width: 100%;}
   }
 
   @media (max-width: 768px) {
@@ -193,5 +196,11 @@
     }
     .c_p_card_main{
         flex-direction: column;
+    }
+    .footer_form{
+        flex-wrap: wrap;
+    }
+    .footer_btn{
+        width: 100%;
     }
   }

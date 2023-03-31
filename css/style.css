@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
-
+    
 ga {
     margin: 0px;
     padding: 0px;
@@ -81,7 +81,13 @@ p {
     -webkit-box-orient: vertical;
     font-size: 20px;
 }
-
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    border-radius: 30px;
+  }
 figure.overlay {
     position: relative;
 }
@@ -165,6 +171,9 @@ figure.overlay::before {
     position: relative;
     justify-content: center;
     margin-right: 30px;
+}
+a.twitter:hover {
+    color: skyblue;
 }
 
 marquee span {
@@ -681,7 +690,10 @@ a.main-slide figure {
     -webkit-line-clamp: 2;
     font-weight: 600;
 }
-
+.coupon_titile p {
+    -webkit-line-clamp: 2;
+    font-size: 15px;
+}
 .description {
     font-size: 14px;
     overflow: hidden;
@@ -1401,7 +1413,7 @@ input.footer_input {
 }
 
 footer.footer {
-    background: rgba(0, 0, 0, 0.78);
+    background: #222123;
     margin-top: 50px;
 }
 
@@ -1499,6 +1511,7 @@ a.icon_link {
     margin-top: 20px;
     padding: 5px;
     font-size: 15px;
+    padding: 14px;
 }
 
 .footer_link ul {
@@ -1509,7 +1522,7 @@ a.icon_link {
 
 .footer_link strong {
     font-size: 20px;
-    background: rgb(56, 56, 56);
+    background: #222123;
     position: relative;
 }
 
@@ -1555,7 +1568,7 @@ a.f_tag:hover {
 }
 
 .footer_link strong span {
-    background: rgb(56, 56, 56);
+    background: #222123;
     position: relative;
     z-index: 1;
 }
@@ -2643,10 +2656,10 @@ figure.overlay::before {
 }
 
 :root {
-    --primary: #E43F45;
-    --primaryDark: #c33c41;
-    --secondary: #c27c4b;
-    --secondaryDark: #966039;
+    --primary: #219EBC;
+    --primaryDark: #1c7a91;
+    --secondary: #023047;
+    --secondaryDark: #032130;
     --accent: blue;
     --white: #fff;
     --black: #222;
@@ -2676,7 +2689,7 @@ marquee span {
 }
 
 .header-top {
-    background-color: var(--primaryDark);
+    background-color: var(--secondaryDark);
 }
 
 .header-bottom {
@@ -3060,6 +3073,7 @@ span.fa.fa-star {
 
 .coupon_bottom {
     display: flex;
+    justify-content: center;
 }
 
 .coupon_btn {
@@ -3151,12 +3165,11 @@ span.fa.fa-star {
 }
 
 .coupon_main_card {
-    display: flex;
-    gap: 15px;
     padding: 10px;
-    background: #f9f5f5;
+    background: #ffffff;
     border-radius: 5px;
     position: relative;
+    box-shadow: rgb(0 0 0 / 18%) 1px 2px 6px 0px;
 }
 
 .coupon_tags {
@@ -3170,6 +3183,7 @@ span.fa.fa-star {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 10px;
 }
 
 .coupon_tags .exp {
@@ -3178,6 +3192,7 @@ span.fa.fa-star {
 
 .coupon_tags .users {
     font-size: 14px;
+    color: #999696;
 }
 
 .coupon_para p {
@@ -3198,6 +3213,7 @@ span.fa.fa-star {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .verified {
@@ -3220,28 +3236,31 @@ span.fa.fa-star {
 }
 
 .coupon_card_img {
-    border-right: 1px dashed #e3e3e3;
-    padding-right: 7px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d1d1d1;
 }
 
 .circle {
     background: white;
     position: absolute;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
+    right: -10px;
 }
 
 .circle.circle_1 {
-    top: -15px;
-    right: 170px;
+    top: 123px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) 2px 0px 3px 0px;
 }
 
 .circle.circle_2 {
-    bottom: -15px;
-    right: 170px;
+    top: 123px;
+    left: -9px;
+    box-shadow: inset rgba(0, 0, 0, 0.1) -2px 0px 3px 0px;
 }
 
 .get_code.deal {
@@ -3256,9 +3275,9 @@ span.fa.fa-star {
 }
 
 .single_store_cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(233px, 1fr));
 }
 
 button.btn_close {
@@ -3419,3 +3438,14 @@ span.click_code {
     right: 0;
     clip-path: polygon(100% 0, 100% 100%, 0 0);
 }
+.coupon_card_title h4 {
+    -webkit-line-clamp: 2;
+}
+.cut {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 120.5px;
+    left: 7px;
+    z-index: 1;
+}   
