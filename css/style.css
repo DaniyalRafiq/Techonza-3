@@ -590,7 +590,9 @@ a.main-slide figure {
     width: 100%;
     border-radius: 10px;
 }
-
+.blog_main {
+    width: 100%;
+}
 .teaser:hover .teaser-date.animated .bubble {
     transform: scale(1.1);
 }
@@ -1143,6 +1145,9 @@ a.icon-link:hover {
 .blog_card .description .read-more {
     text-align: right;
 }
+.read-more a:hover {
+    color: var(--primaryDark) !important;
+}
 
 .blog_card .description .read-more a {
     color: var(--primary);
@@ -1517,7 +1522,7 @@ a.icon_link {
 .footer_link ul {
     display: flex;
     flex-direction: column;
-    gap: 9px;
+    gap: 10px;
 }
 
 .footer_link strong {
@@ -1530,7 +1535,7 @@ a.f_tag {
     border-radius: 5px;
     text-transform: capitalize;
     color: white;
-    background: rgb(44, 44, 44);
+    background: rgb(50 49 49);
     transition: all 0.3s ease 0s;
     padding: 10px 20px;
     font-size: 14px !important;
@@ -1544,7 +1549,7 @@ a.f_tag {
 
 a.f_tag:hover {
     color: white;
-    background: rgb(34 33 33);
+    background: rgb(42 42 42);
 }
 
 .footer_link ul strong::after {
