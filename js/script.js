@@ -46,7 +46,7 @@ $(document).ready(function () {
         }
       }
   });
-  const mainAlpha = $('.main-alphabet');
+  const mainAlpha = $('.alphabet');
   const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   for (let index = 0; index < alphabet.length; index++) {
      $(mainAlpha).append(`<a href="#" class="alphabet-item">${alphabet[index]}</a>`);
